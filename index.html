@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,13 +40,91 @@
             type="text"
             id="destination"
             name="destination"
-            placeholder="Digite o destino"
+            placeholder="Selecionar..."
             required
           />
           <div id="destination-suggestions"></div>
 
-          <!-- Cam-->
+          <!-- Campo de porto de embarque -->
+          <label for="port">Porto de Embarque</label>
+          <input
+            type="text"
+            id="port"
+            name="port"
+            placeholder="Selecionar..."
+          />
+
+          <!-- Campo de número de passageiros -->
+          <label for="passengers">Passageiros</label>
+          <input
+            type="number"
+            id="passagers"
+            name="passagers"
+            placeholder="2 adults"
+            min="1"
+            required
+          />
+
+          <!-- Campo de data de embarque -->
+          <label for="departure__date">Data de Embarque</label>
+          <input
+            type="date"
+            id="departure__date"
+            name="departure__date"
+            required
+          />
+
+          <!-- Botão de pesquisa -->
+          <button type="submit">BUSCAR</button>
         </form>
+      </section>
+      <section id="pacotes">
+        <h1 id="pacotes__titulo">Nossos destaques</h1>
+
+        <!-- Bloco 1: Pacote de Viagem -->
+        <div class="pacote">
+          <img
+            src="imagem1.png"
+            alt="Imagem do Local 1"
+            class="pacote__imagem"
+          />
+          <h3>MSC Grand Voyages</h3>
+          <p>A partir de*</p>
+          <h2>R$ 7.500,00/pessoa</h2>
+          <p>MSC Seaview</p>
+          <p>Saindo de: Barcelona</p>
+          <p>Porto de desembarque: Rio de Janeiro</p>
+        </div>
+
+        <!-- Bloco 2: Pacote de Viagem -->
+        <div class="pacote">
+          <img
+            src="imagem1.png"
+            alt="Imagem do Local 1"
+            class="pacote__imagem"
+          />
+          <h3>MSC Dubai, Abu Dhabi & Qatar</h3>
+          <p>A partir de*</p>
+          <h2>R$ 9.500,00/pessoa</h2>
+          <p>MSC Euribia</p>
+          <p>Saindo de: Dubai</p>
+          <p>Porto de desembarque: Dubai</p>
+        </div>
+
+        <!-- Bloco 3: Pacote de Viagem -->
+        <div class="pacote">
+          <img
+            src="imagem1.png"
+            alt="Imagem do Local 1"
+            class="pacote__imagem"
+          />
+          <h3>MSC Grand Voyages</h3>
+          <p>A partir de *</p>
+          <h2>R$ 7.500,00/pessoa</h2>
+          <p>MSC Seaview</p>
+          <p>Saindo de: Barcelona</p>
+          <p>Porto de desembarque: Rio de Janeiro</p>
+        </div>
       </section>
     </main>
   </body>
