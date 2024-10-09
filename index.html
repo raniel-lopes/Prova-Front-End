@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>MSC_CRUZEIROS</title>
   </head>
   <body>
     <main>
@@ -14,6 +14,7 @@
         </div>
         <nav>
           <ul>
+            <!--Menu Superior de navegação-->
             <li><a href="#">ENCONTRE SEU CRUZEIRO</a></li>
             <li><a href="#">OFERTAS</a></li>
             <li><a href="#">NOSSO NAVIOS</a></li>
@@ -32,7 +33,20 @@
       </header>
       <section id="reservar">
         <h3>Reserva Agora</h3>
-        <label></label>
+        <form>
+          <!-- Campo de destino -->
+          <label for="destination">Destino</label>
+          <input
+            type="text"
+            id="destination"
+            name="destination"
+            placeholder="Digite o destino"
+            required
+          />
+          <div id="destination-suggestions"></div>
+
+          <!-- Cam-->
+        </form>
       </section>
     </main>
   </body>
