@@ -14,10 +14,16 @@ body {
 
 main {
     background: url("/img/bg_main.png") no-repeat top center;
+    /* Define a imagem de fundo */
+    background-size: 100% auto;
+    /* Faz a imagem ocupar 100% da largura e mantém a altura proporcional */
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    /* Garante que o main ocupe toda a largura da tela */
 }
+
 
 header {
     display: flex;
@@ -137,29 +143,47 @@ nav a:hover {
         /* Altera a cor do link ao passar o mouse */
 }
 
+
 .promocoes-container {
-    text-align: center;
-    /* Centraliza o texto */
+    display: flex;
+    /* Usa flexbox para alinhar os itens horizontalmente */
+    flex-direction: column;
+    /* Alinha os itens na coluna */
+    align-items: flex-start;
+    /* Alinha os itens à esquerda */
+    text-align: left;
+    /* Alinha o texto à esquerda */
     margin-top: 20px;
     /* Espaço acima do container de promoções */
+    padding-left: 817px;
+    /* Distância da borda esquerda */
+    padding-right: 64px;
+    /* Distância da borda direita */
+    font-family: 'Poppins', sans-serif;
+    /* Aplica a fonte Poppins */
+    color: white;
+    /* Altera a cor da fonte para branco */
 }
 
-h2 {
-    color: rgb(0, 0, 0);
-    /* Cor do texto do título */
-    margin-top: 15px;
-    /* Espaço acima do título */
+.promocoes-container h2 {
+    margin: 10px 0;
+    /* Espaço em cima e embaixo do título */
+    font-size: 48px;
+    /* Tamanho da fonte do título */
+    color: white;
+    /* Altera a cor do título para branco */
 }
 
-h3 {
-    color: black;
-    /* Cor do texto do subtítulo */
+.promocoes-container h3 {
     margin: 10px 0;
     /* Espaço em cima e embaixo do subtítulo */
+    font-size: 24px;
+    /* Tamanho da fonte do subtítulo */
+    color: white;
+    /* Altera a cor do subtítulo para branco */
 }
 
 .botao__compre {
-    /* Estilização para o botão */
     background-color: #FF6200EE;
     /* Cor de fundo do botão */
     color: white;
@@ -170,16 +194,251 @@ h3 {
     /* Espaçamento interno do botão */
     font-family: 'Poppins', sans-serif;
     /* Fonte Poppins */
-    font-size: 14px;
+    font-size: 16px;
     /* Tamanho da fonte do botão */
     cursor: pointer;
     /* Cursor de pointer ao passar o mouse */
     text-transform: uppercase;
     /* Texto em maiúsculas */
+    transition: background-color 0.3s ease;
+    /* Transição suave para a cor do botão */
+    border-radius: 6px;
+    /* Arredondamento de 6px */
+
 }
 
 .botao__compre:hover {
     background-color: #FFBB86FC;
     /* Cor do botão ao passar o mouse */
+}
 
+#reservar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    background-color: #fff;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 110px 162px;
+    /* Distância de 162px da borda superior e inferior */
+    border-radius: 7px;
+    box-shadow: 2px -12px 6px 6px rgba(0, 0, 0, 0.26);
+    width: 956px;
+    /* Largura da seção */
+    height: 290px;
+    /* Altura da seção */
+    margin-bottom: 18px;
+    /* Adiciona espaçamento abaixo da seção de reserva */
+
+}
+
+#reservar h3 {
+    color: #1A1C39;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0 0 28px 0;
+    /* Margem inferior de 28px para o espaço abaixo do título */
+}
+
+.divider {
+    border: none;
+    /* Remove a borda padrão */
+    border-top: 1px solid #B9B9B9;
+    /* Borda superior com a cor desejada */
+    margin: 0;
+    /* Remove a margem padrão */
+    width: 100%;
+    /* Largura total da seção */
+    margin-bottom: 20px;
+    /* Espaço abaixo da linha */
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    /* Remova a margem superior, se estiver presente */
+}
+
+
+label {
+    margin: 10px 0;
+    color: var(--gray-1, #4E4E4E);
+    /* Cor do texto da label */
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Poppins;
+    font-size: 14px;
+    /* Tamanho da fonte */
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    /* Altura da linha */
+    flex: 1;
+    /* Permite que os rótulos ocupem espaço proporcional */
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="date"] {
+    padding: 8px;
+}
+
+
+button {
+    padding: 10px 20px;
+    background: #1A1C39;
+    /* Cor de fundo do botão */
+    color: #FFF;
+    /* Cor do texto do botão */
+    border: none;
+    border-radius: 6px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    /* Peso da fonte */
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    /* Texto em maiúsculas */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    /* Espaço acima do botão */
+}
+
+button:hover {
+    background-color: #FFBB86FC;
+    /* Cor do botão ao passar o mouse */
+}
+
+#destination,
+#port,
+#passengers {
+    flex: 1;
+    margin-right: 10px;
+}
+
+#passengers {
+    margin-right: 0;
+    /* Remove a margem à direita do último campo */
+}
+
+/* Seção geral */
+#pacotes {
+    background-color: #fff;
+    /* Fundo branco para a seção */
+    padding: 40px 20px;
+    /* Espaçamento interno */
+    margin: 0 164px;
+    /* Margem lateral de 164px */
+}
+
+#pacotes__titulo {
+    color: #1A1C39;
+    /* Cor do título */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte Poppins */
+    font-size: 36px;
+    /* Tamanho da fonte */
+    font-weight: 700;
+    /* Peso da fonte */
+    text-transform: uppercase;
+    /* Texto em maiúsculas */
+    margin-bottom: 30px;
+    /* Espaço abaixo do título */
+}
+
+.pacotes-container {
+    display: flex;
+    /* Usar flexbox para alinhar os pacotes em linha */
+    flex-wrap: wrap;
+    /* Permite que os pacotes se movam para a próxima linha se não houver espaço */
+    justify-content: center;
+    /* Centraliza os pacotes dentro da seção */
+}
+
+.pacote {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 303px;
+    height: 466px;
+    /* Altura total do pacote */
+    margin: 0 10px;
+    /* Espaço entre os pacotes */
+    /* Borda opcional */
+    border-radius: 8px;
+    /* Arredondamento das bordas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    flex-shrink: 0;
+    /* Evita que os pacotes encolham */
+}
+
+.pacote__imagem {
+    width: 100%;
+    /* Faz a imagem ocupar toda a largura do pacote */
+    height: 50%;
+    /* Faz a imagem ocupar 50% da altura do pacote */
+    border-top-left-radius: 16px;
+    /* Arredondamento das bordas superiores */
+    border-top-right-radius: 16px;
+    /* Arredondamento das bordas superiores */
+    object-fit: cover;
+    /* A imagem preencherá o contêiner sem distorcer a proporção */
+}
+
+.pacote h3,
+.pacote p,
+.pacote h2 {
+    margin: 0;
+    /* Remove margens indesejadas */
+    padding: 10px;
+    /* Espaçamento interno para os textos */
+}
+
+.pacote h3 {
+    color: #1A1C39;
+    /* Cor do título do pacote */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte Poppins */
+    font-size: 24px;
+    /* Tamanho da fonte */
+}
+
+.pacote p {
+    color: #4E4E4E;
+    /* Cor do texto descritivo */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte Poppins */
+    font-size: 14px;
+    /* Tamanho da fonte */
+}
+
+.pacote h2 {
+    color: #FF6200EE;
+    /* Cor do preço */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte Poppins */
+    font-size: 20px;
+    /* Tamanho da fonte */
 }
