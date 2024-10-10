@@ -7,8 +7,9 @@
 html,
 body {
     overflow-x: hidden;
+    /* Esconde a rolagem horizontal */
     width: 100%;
-    font-family: "Montserrat", sans-serif, Verdana, Geneva, Tahoma;
+    /* Garante que o body não ultrapasse a largura da viewport */
 }
 
 main {
@@ -20,75 +21,139 @@ main {
 
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /* Alinha os itens na coluna */
     align-items: center;
-    background-color: #1A1C39;
-    color: #FFF;
-    padding: 20px 40px;
-    /* Adicionei padding para ajustar a margem interna */
+    /* Centraliza os itens horizontalmente */
     width: 100%;
-    height: 297px;
 }
 
+.barra-superior {
+    background-color: #002147;
+    /* Cor da barra superior */
+    color: #FFF;
+    /* Cor do texto na barra superior */
+    width: 100%;
+    /* Ocupa toda a largura */
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 10px 0;
+    /* Espaçamento vertical */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte Poppins */
+}
+
+.container-header {
+    display: flex;
+    /* Usa flexbox para o logo e nav */
+    align-items: center;
+    /* Centraliza verticalmente */
+    width: 100%;
+    /* Ocupa toda a largura */
+    background-color: #1A1C39;
+    /* Cor de fundo da barra do logo e nav */
+    padding: 10px 0;
+    /* Espaçamento vertical */
+}
 
 .logo {
-    width: 133px;
-    height: 48px;
+    width: 132.84px;
+    /* Largura da logo */
+    height: 47.689px;
+    /* Altura da logo */
     flex-shrink: 0;
+    /* Não encolhe */
 }
 
 nav {
-    flex: 1;
-    /* Para ocupar o espaço central */
+    width: 100%;
+    /* Ocupa toda a largura do header */
     display: flex;
+    /* Usa flexbox para o menu */
     justify-content: center;
+    /* Centraliza os itens no nav */
 }
 
 nav ul {
     display: flex;
+    /* Exibe os itens do menu em linha */
     list-style: none;
+    /* Remove as bolinhas da lista */
     padding: 0;
+    /* Remove o padding da lista */
     margin: 0;
+    /* Remove a margem da lista */
 }
 
-nav ul li {
+nav li {
     margin: 0 15px;
+    /* Espaçamento entre os itens do menu */
 }
 
-nav ul li a {
+nav a {
     text-decoration: none;
+    /* Remove o sublinhado do link */
     color: #FFF;
-    font-family: Poppins, sans-serif;
+    /* Cor do texto do link */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte Poppins */
     font-size: 12px;
+    /* Tamanho da fonte */
     font-weight: 400;
+    /* Peso da fonte */
     text-transform: uppercase;
+    /* Texto em maiúsculas */
     transition: color 0.3s ease, border-bottom 0.3s ease;
+    /* Transição suave */
 }
 
-nav ul li a:hover {
+nav a:hover {
     border-bottom: 2px solid orange;
+    /* Altera a cor do link ao passar o mouse */
 }
 
-.topo__contato {
-    font-size: 10px;
-    text-transform: uppercase;
-    font-family: Poppins, sans-serif;
+.promocoes-container {
+    text-align: center;
+    /* Centraliza o texto */
+    margin-top: 20px;
+    /* Espaço acima do container de promoções */
 }
 
-header h2 {
+h2 {
+    color: rgb(0, 0, 0);
+    /* Cor do texto do título */
     margin-top: 15px;
-    color: #FFF;
-    text-align: right;
-    text-shadow: 7px 8px 12px rgba(0, 0, 0, 0.21);
-    font-size: 48px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    /* Espaço acima do título */
 }
 
-header h3 {
-    color: #FFF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.61);
-    font-family: Poppins;
-    font-size: 24px;
-    font-weight: 400;
+h3 {
+    color: black;
+    /* Cor do texto do subtítulo */
+    margin: 10px 0;
+    /* Espaço em cima e embaixo do subtítulo */
+}
+
+.botao__compre {
+    /* Estilização para o botão */
+    background-color: #FF6200EE;
+    /* Cor de fundo do botão */
+    color: white;
+    /* Cor do texto do botão */
+    border: none;
+    /* Remove borda padrão */
+    padding: 10px 20px;
+    /* Espaçamento interno do botão */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte Poppins */
+    font-size: 14px;
+    /* Tamanho da fonte do botão */
+    cursor: pointer;
+    /* Cursor de pointer ao passar o mouse */
+    text-transform: uppercase;
+    /* Texto em maiúsculas */
+}
+
+.botao__compre:hover {
+    background-color: #FFBB86FC;
+    /* Cor do botão ao passar o mouse */
 }
