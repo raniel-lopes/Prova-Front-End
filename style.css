@@ -29,19 +29,28 @@ header {
 }
 
 .barra-superior {
-    background-color: #002147;
+    display: flex;
+    /* Usa flexbox para alinhar itens */
+    justify-content: flex-end;
+    /* Alinha o texto à direita */
+    background-color: #1A1C39;
     /* Cor da barra superior */
     color: #FFF;
     /* Cor do texto na barra superior */
     width: 100%;
     /* Ocupa toda a largura */
-    text-align: center;
-    /* Centraliza o texto */
-    padding: 10px 0;
-    /* Espaçamento vertical */
+    padding: 12px 41px;
+    /* Espaçamento vertical e horizontal */
     font-family: 'Poppins', sans-serif;
     /* Fonte Poppins */
 }
+
+.barra-superior p {
+    margin: 0;
+    /* Remove margem do parágrafo */
+    font-size: 10px;
+}
+
 
 .container-header {
     display: flex;
@@ -52,8 +61,21 @@ header {
     /* Ocupa toda a largura */
     background-color: #1A1C39;
     /* Cor de fundo da barra do logo e nav */
-    padding: 10px 0;
+    padding: 0 0 38px 0;
     /* Espaçamento vertical */
+}
+
+.barra-fixa {
+    height: 1px;
+    /* Altura da barra */
+    background-color: rgba(255, 255, 255, 0.50);
+    /* Cor da barra */
+    width: calc(100% - 20px);
+    /* Ocupa toda a largura menos 20px */
+    margin-left: 20px;
+    /* Espaço de 20px à esquerda para alinhar com a logo */
+    margin: 0;
+    /* Remove margens padrão */
 }
 
 .logo {
@@ -63,15 +85,18 @@ header {
     /* Altura da logo */
     flex-shrink: 0;
     /* Não encolhe */
+    margin-right: 78px;
+    /* Espaço à direita da logo */
+    margin-left: 10px;
 }
 
 nav {
-    width: 100%;
-    /* Ocupa toda a largura do header */
     display: flex;
     /* Usa flexbox para o menu */
-    justify-content: center;
-    /* Centraliza os itens no nav */
+    justify-content: flex-start;
+    /* Alinha os itens à esquerda */
+    max-width: calc(100% - 210.84px);
+    /* Limita a largura do nav considerando a logo e a margem */
 }
 
 nav ul {
@@ -86,7 +111,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0 15px;
+    margin: 0 7px;
     /* Espaçamento entre os itens do menu */
 }
 
@@ -108,8 +133,8 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: 2px solid orange;
-    /* Altera a cor do link ao passar o mouse */
+    border-bottom: 3px solid #FF6900
+        /* Altera a cor do link ao passar o mouse */
 }
 
 .promocoes-container {
@@ -156,4 +181,5 @@ h3 {
 .botao__compre:hover {
     background-color: #FFBB86FC;
     /* Cor do botão ao passar o mouse */
+
 }
