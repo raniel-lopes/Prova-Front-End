@@ -4,17 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MSC_CRUZEIROS</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <!-- Imagem de fundo com o navio entra aqui -->
       <header>
+        <div class="logo">
+          <img src="/img/logo_topo.svg" alt="Logo" />
+        </div>
         <div class="topo__contato">
           <p>BRASIL 011 - 3878-8135</p>
         </div>
         <nav>
           <ul>
-            <!--Menu Superior de navegação-->
+            <!-- Menu Superior de navegação -->
             <li><a href="#">ENCONTRE SEU CRUZEIRO</a></li>
             <li><a href="#">OFERTAS</a></li>
             <li><a href="#">NOSSO NAVIOS</a></li>
@@ -31,6 +34,8 @@
           <button class="botao__compre">COMPRE AGORA</button>
         </a>
       </header>
+
+      <!-- Reservar -->
       <section id="reservar">
         <h3>Reserva Agora</h3>
         <form>
@@ -58,9 +63,9 @@
           <label for="passengers">Passageiros</label>
           <input
             type="number"
-            id="passagers"
-            name="passagers"
-            placeholder="2 adults"
+            id="passengers"
+            name="passengers"
+            placeholder="2 adultos"
             min="1"
             required
           />
@@ -78,54 +83,106 @@
           <button type="submit">BUSCAR</button>
         </form>
       </section>
+
+      <!-- Pacotes de viagens -->
       <section id="pacotes">
         <h1 id="pacotes__titulo">Nossos destaques</h1>
 
         <!-- Bloco 1: Pacote de Viagem -->
         <div class="pacote">
-          <img
-            src="imagem1.png"
-            alt="Imagem do Local 1"
-            class="pacote__imagem"
-          />
+          <img src="img/" alt="Imagem do Local 1" class="pacote__imagem" />
           <h3>MSC Grand Voyages</h3>
           <p>A partir de*</p>
           <h2>R$ 7.500,00/pessoa</h2>
-          <p>MSC Seaview</p>
-          <p>Saindo de: Barcelona</p>
-          <p>Porto de desembarque: Rio de Janeiro</p>
+          <p>
+            MSC Seaview Saindo de: Barcelona Porto de desembarque: Rio de
+            Janeiro
+          </p>
         </div>
 
         <!-- Bloco 2: Pacote de Viagem -->
         <div class="pacote">
           <img
-            src="imagem1.png"
-            alt="Imagem do Local 1"
+            src="imagem2.png"
+            alt="Imagem do Local 2"
             class="pacote__imagem"
           />
           <h3>MSC Dubai, Abu Dhabi & Qatar</h3>
           <p>A partir de*</p>
           <h2>R$ 9.500,00/pessoa</h2>
-          <p>MSC Euribia</p>
-          <p>Saindo de: Dubai</p>
-          <p>Porto de desembarque: Dubai</p>
+          <p>MSC Euribia Saindo de: Dubai Porto de desembarque: Dubai</p>
         </div>
 
         <!-- Bloco 3: Pacote de Viagem -->
         <div class="pacote">
           <img
-            src="imagem1.png"
-            alt="Imagem do Local 1"
+            src="imagem3.png"
+            alt="Imagem do Local 3"
             class="pacote__imagem"
           />
-          <h3>MSC Grand Voyages</h3>
+          <h3>MSC CARIBE SEM VISTO</h3>
           <p>A partir de *</p>
-          <h2>R$ 7.500,00/pessoa</h2>
-          <p>MSC Seaview</p>
-          <p>Saindo de: Barcelona</p>
-          <p>Porto de desembarque: Rio de Janeiro</p>
+          <h2>R$ 5.500,00/pessoa</h2>
+          <p>
+            Partindo de Miami, Flórida. Labadee, Haiti A bordo Independence of
+            the Seas
+          </p>
+        </div>
+      </section>
+
+      <!-- Nossos Navios -->
+      <section id="nossos__navios">
+        <h3 id="nossos__navios__titulo">Nossos Navios</h3>
+        <div class="navio__galeria">
+          <div class="navio__card">
+            <img
+              src="msc-armonia.jpg"
+              alt="MSC Armonia"
+              class="navio__imagem"
+            />
+            <p class="navio__nome">MSC ARMONIA</p>
+          </div>
+          <div class="navio__card">
+            <img
+              src="msc-bellissima.jpg"
+              alt="MSC Bellissima"
+              class="navio__imagem"
+            />
+            <p class="navio__nome">MSC BELLISSIMA</p>
+          </div>
+          <div class="navio__card">
+            <img
+              src="msc-euribia.jpg"
+              alt="MSC Euribia"
+              class="navio__imagem"
+            />
+            <p class="navio__nome">MSC EURIBIA</p>
+          </div>
+          <div class="navio__card">
+            <img
+              src="msc-meraviglia.jpg"
+              alt="MSC Meraviglia"
+              class="navio__imagem"
+            />
+            <p class="navio__nome">MSC MERAVIGLIA</p>
+          </div>
+          <div class="navio__card">
+            <img src="msc-opera.jpg" alt="MSC Opera" class="navio__imagem" />
+            <p class="navio__nome">MSC OPERA</p>
+          </div>
+          <div class="navio__card">
+            <img
+              src="msc-preziosa.jpg"
+              alt="MSC Preziosa"
+              class="navio__imagem"
+            />
+            <p class="navio__nome">MSC PREZIOSA</p>
+          </div>
         </div>
       </section>
     </main>
+    <footer>
+      <p>© 2024 MSC Cruises S.A. Todos os direitos reservados.</p>
+    </footer>
   </body>
 </html>
