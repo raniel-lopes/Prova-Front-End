@@ -22,6 +22,7 @@ main {
     align-items: center;
     width: 100%;
     /* Garante que o main ocupe toda a largura da tela */
+
 }
 
 
@@ -146,66 +147,51 @@ nav a:hover {
 
 .promocoes-container {
     display: flex;
-    /* Usa flexbox para alinhar os itens horizontalmente */
     flex-direction: column;
-    /* Alinha os itens na coluna */
     align-items: flex-start;
-    /* Alinha os itens à esquerda */
     text-align: left;
-    /* Alinha o texto à esquerda */
-    margin-top: 20px;
-    /* Espaço acima do container de promoções */
-    padding-left: 817px;
-    /* Distância da borda esquerda */
+    margin-top: 42px;
+    padding-left: 870px;
+    /* Ajuste para mover um pouco para a esquerda */
     padding-right: 64px;
-    /* Distância da borda direita */
     font-family: 'Poppins', sans-serif;
-    /* Aplica a fonte Poppins */
     color: white;
-    /* Altera a cor da fonte para branco */
 }
 
 .promocoes-container h2 {
-    margin: 10px 0;
-    /* Espaço em cima e embaixo do título */
+    margin: 0px 0 0px 0;
+    /* Margem inferior de 16px para o espaçamento entre o h2 e h3 */
     font-size: 48px;
-    /* Tamanho da fonte do título */
     color: white;
-    /* Altera a cor do título para branco */
 }
 
 .promocoes-container h3 {
-    margin: 10px 0;
-    /* Espaço em cima e embaixo do subtítulo */
+    margin: 0;
+    /* Remove a margem superior para que apenas o espaçamento do h2 seja considerado */
     font-size: 24px;
-    /* Tamanho da fonte do subtítulo */
     color: white;
-    /* Altera a cor do subtítulo para branco */
 }
 
 .botao__compre {
     background-color: #FF6200EE;
-    /* Cor de fundo do botão */
     color: white;
-    /* Cor do texto do botão */
     border: none;
-    /* Remove borda padrão */
     padding: 10px 20px;
-    /* Espaçamento interno do botão */
     font-family: 'Poppins', sans-serif;
-    /* Fonte Poppins */
     font-size: 16px;
-    /* Tamanho da fonte do botão */
     cursor: pointer;
-    /* Cursor de pointer ao passar o mouse */
     text-transform: uppercase;
-    /* Texto em maiúsculas */
     transition: background-color 0.3s ease;
-    /* Transição suave para a cor do botão */
     border-radius: 6px;
-    /* Arredondamento de 6px */
+    margin-top: 16px;
+    /* Adiciona um espaçamento de 24px entre o botão e os elementos acima */
 
 }
+
+.botao__compre:hover {
+    background-color: #FFBB86FC;
+}
+
 
 .botao__compre:hover {
     background-color: #FFBB86FC;
@@ -218,19 +204,13 @@ nav a:hover {
     align-items: flex-start;
     padding: 40px;
     background-color: #fff;
-    color: white;
     font-family: 'Poppins', sans-serif;
     margin: 110px 162px;
-    /* Distância de 162px da borda superior e inferior */
     border-radius: 7px;
     box-shadow: 2px -12px 6px 6px rgba(0, 0, 0, 0.26);
     width: 956px;
-    /* Largura da seção */
-    height: 290px;
-    /* Altura da seção */
+    height: auto;
     margin-bottom: 18px;
-    /* Adiciona espaçamento abaixo da seção de reserva */
-
 }
 
 #reservar h3 {
@@ -242,46 +222,50 @@ nav a:hover {
     font-weight: 400;
     line-height: 16px;
     margin: 0 0 28px 0;
-    /* Margem inferior de 28px para o espaço abaixo do título */
 }
 
 .divider {
     border: none;
-    /* Remove a borda padrão */
     border-top: 1px solid #B9B9B9;
-    /* Borda superior com a cor desejada */
     margin: 0;
-    /* Remove a margem padrão */
     width: 100%;
-    /* Largura total da seção */
     margin-bottom: 20px;
-    /* Espaço abaixo da linha */
 }
 
 form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
+}
+
+.linha {
+    display: flex;
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
-    /* Remova a margem superior, se estiver presente */
+    margin-bottom: 20px;
 }
 
+.campo {
+    display: flex;
+    flex-direction: column;
+    width: 244px;
+    margin-right: 10px;
+}
+
+.campo:last-child {
+    margin-right: 0;
+}
 
 label {
-    margin: 10px 0;
     color: var(--gray-1, #4E4E4E);
-    /* Cor do texto da label */
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: Poppins;
     font-size: 14px;
-    /* Tamanho da fonte */
     font-style: normal;
     font-weight: 400;
     line-height: 16px;
-    /* Altura da linha */
-    flex: 1;
-    /* Permite que os rótulos ocupem espaço proporcional */
+    margin-bottom: 5px;
 }
 
 input {
@@ -289,57 +273,40 @@ input {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    margin-bottom: 20px;
-    width: calc(100% - 20px);
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
-
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-
-input[type="date"] {
-    padding: 8px;
-}
-
 
 button {
     padding: 10px 20px;
     background: #1A1C39;
-    /* Cor de fundo do botão */
     color: #FFF;
-    /* Cor do texto do botão */
     border: none;
     border-radius: 6px;
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
     font-size: 16px;
-    font-style: normal;
     font-weight: 600;
-    /* Peso da fonte */
-    line-height: normal;
-    text-align: center;
     text-transform: uppercase;
-    /* Texto em maiúsculas */
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 20px;
-    /* Espaço acima do botão */
+    width: 244px;
 }
 
 button:hover {
     background-color: #FFBB86FC;
-    /* Cor do botão ao passar o mouse */
+}
+
+#passengers {
+    margin-top: 0;
 }
 
 #destination,
 #port,
-#passengers {
+#departure__date {
     flex: 1;
-    margin-right: 10px;
-}
-
-#passengers {
-    margin-right: 0;
-    /* Remove a margem à direita do último campo */
+    margin-bottom: 0;
 }
 
 /* Seção geral */
@@ -470,18 +437,32 @@ button:hover {
 }
 
 #nossos__navios {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.navio__fundo {
     background-image: url('img/bg_nossos_navios.png');
-    /* Substitua pelo caminho da sua imagem */
+    /* Caminho da imagem de fundo */
+    width: 100%;
+    /* A seção ocupa 100% da largura disponível */
+    height: 100%;
+    /* Altura total do pai */
     background-size: cover;
     /* Faz com que a imagem cubra toda a seção */
     background-position: center;
     /* Centraliza a imagem de fundo */
-    padding: 40px 20px;
-    /* Espaçamento interno */
-    text-align: center;
-    /* Centraliza o texto dentro da seção */
-    color: #fff;
-    /* Cor do texto (branco, para destacar sobre o fundo) */
+    background-repeat: no-repeat;
+    /* Impede a repetição da imagem */
+    display: flex;
+    /* Usar flexbox para centralizar o conteúdo */
+    flex-direction: column;
+    /* Alinha o conteúdo em coluna */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
 }
 
 #nossos__navios__titulo {
@@ -493,6 +474,14 @@ button:hover {
     /* Peso da fonte */
     margin-bottom: 30px;
     /* Espaço abaixo do título */
+    color: #fff;
+    /* Cor do texto (branco, para destacar sobre o fundo) */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+    width: 100%;
+    /* Garante que o título ocupe a largura total */
+    margin-left: 560px;
+    margin-top: 23px;
 }
 
 .navio__galeria {
@@ -502,21 +491,33 @@ button:hover {
     /* Duas colunas de largura igual */
     gap: 30px;
     /* Espaçamento entre os cards */
+    margin-bottom: 50px;
 }
 
 .navio__card {
-    display: flex;
-    /* Usar flexbox para alinhar a imagem e o nome do navio */
-    flex-direction: column;
-    /* Itens empilhados verticalmente */
-    align-items: center;
-    /* Centraliza os itens horizontalmente */
-    margin: 0;
-    /* Remove margens extras */
-    width: 100%;
-    /* Largura dos cards */
-    color: #1A1C39;
-    /* Cor do texto dos nomes dos navios */
+    position: relative;
+    /* Permite posicionar elementos filhos em relação a este card */
+    width: 466px;
+    /* Largura do card */
+    height: 145px;
+    /* Altura do card */
+    flex-shrink: 0;
+    /* Impede que o card encolha */
+    border-radius: 12px;
+    /* Arredondamento das bordas */
+    background: none;
+    /* Fundo com cor e opacidade */
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    /* Sombra */
+    overflow: hidden;
+    /* Esconde qualquer conteúdo que ultrapasse a borda */
+}
+
+.navio__card:hover {
+    transform: scale(1.05);
+    /* Aumenta o tamanho do card em 5% ao passar o mouse */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    /* Aumenta a sombra ao passar o mouse */
 }
 
 .navio__imagem {
@@ -524,15 +525,61 @@ button:hover {
     /* A imagem ocupa toda a largura do card */
     height: auto;
     /* Mantém a proporção da imagem */
-    border-radius: 8px;
-    /* Bordas arredondadas nas imagens */
+    border-radius: 12px 12px 0px 0px;
+    /* Bordas arredondadas apenas na parte superior */
 }
 
 .navio__nome {
-    margin-top: 10px;
-    /* Espaço acima do nome do navio */
+    display: flex;
+    /* Flex para permitir alinhar o texto */
+    align-items: center;
+    /* Alinha verticalmente o texto */
+    position: absolute;
+    /* Permite o posicionamento absoluto */
+    bottom: 0;
+    /* Fixa o fundo na parte inferior do card */
+    left: 0;
+    /* Fixa à esquerda do card */
+    width: 100%;
+    /* Largura total do card */
+    height: 36px;
+    /* Altura fixa para o texto */
+    color: #000;
+    /* Cor do texto */
     font-family: 'Poppins', sans-serif;
-    /* Fonte do nome do navio */
-    font-size: 14px;
+    /* Fonte Poppins */
+    font-size: 24px;
     /* Tamanho da fonte do nome do navio */
+    font-style: normal;
+    /* Estilo da fonte */
+    font-weight: 700;
+    /* Peso da fonte */
+    line-height: 36px;
+    /* Altura da linha igual à altura do texto para centralizar verticalmente */
+    text-transform: uppercase;
+    /* Texto em maiúsculas */
+    background: rgba(217, 217, 217, 0.70);
+    /* Fundo semi-transparente para melhor legibilidade */
+    padding: 0 16px;
+    /* Remover o padding superior e inferior */
+    border-radius: 0 0 4px 4px;
+    /* Bordas arredondadas apenas na parte inferior */
+    box-sizing: border-box;
+    /* Inclui padding e border no cálculo de largura e altura */
+}
+
+footer {
+    background-color: #1A1C39;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -63,48 +63,59 @@
         <!-- Linha abaixo do título -->
 
         <form>
-          <!-- Campo de destino -->
-          <label for="destination">Destino</label>
-          <input
-            type="text"
-            id="destination"
-            name="destination"
-            placeholder="Selecionar..."
-            required
-          />
-          <div id="destination-suggestions"></div>
+          <div class="linha">
+            <!-- Campo de destino -->
+            <div class="campo">
+              <label for="destination">Destino</label>
+              <input
+                type="text"
+                id="destination"
+                name="destination"
+                placeholder="Selecionar..."
+                required
+              />
+            </div>
 
-          <!-- Campo de porto de embarque -->
-          <label for="port">Porto de Embarque</label>
-          <input
-            type="text"
-            id="port"
-            name="port"
-            placeholder="Selecionar..."
-          />
+            <!-- Campo de porto de embarque -->
+            <div class="campo">
+              <label for="port">Porto de Embarque</label>
+              <input
+                type="text"
+                id="port"
+                name="port"
+                placeholder="Selecionar..."
+              />
+            </div>
 
-          <!-- Campo de número de passageiros -->
-          <label for="passengers">Passageiros</label>
-          <input
-            type="number"
-            id="passengers"
-            name="passengers"
-            placeholder="2 adultos"
-            min="1"
-            required
-          />
+            <!-- Campo de data de embarque -->
+            <div class="campo">
+              <label for="departure__date">Data de Embarque</label>
+              <input
+                type="date"
+                id="departure__date"
+                name="departure__date"
+                required
+              />
+            </div>
+          </div>
 
-          <!-- Campo de data de embarque -->
-          <label for="departure__date">Data de Embarque</label>
-          <input
-            type="date"
-            id="departure__date"
-            name="departure__date"
-            required
-          />
+          <div class="linha">
+            <!-- Campo de número de passageiros -->
+            <div class="campo">
+              <label for="passengers">Passageiros</label>
+              <input
+                type="number"
+                id="passengers"
+                name="passengers"
+                placeholder="2 adultos"
+                min="1"
+                required
+              />
+            </div>
 
-          <!-- Botão de pesquisa -->
-          <button type="submit">BUSCAR</button>
+            <!-- Botão de pesquisa -->
+            <button type="submit">BUSCAR</button>
+          </div>
         </form>
       </section>
 
@@ -164,56 +175,59 @@
       </section>
 
       <!-- Nossos Navios -->
+      <!-- Nossos Navios -->
       <section id="nossos__navios">
-        <h3 id="nossos__navios__titulo">Nossos Navios</h3>
-        <div class="navio__galeria">
-          <div class="navio__card">
-            <img
-              src="img/msc_armonia.png"
-              alt="MSC Armonia"
-              class="navio__imagem"
-            />
-            <p class="navio__nome">MSC ARMONIA</p>
-          </div>
-          <div class="navio__card">
-            <img
-              src="img/msc_bellissima.png"
-              alt="MSC Bellissima"
-              class="navio__imagem"
-            />
-            <p class="navio__nome">MSC BELLISSIMA</p>
-          </div>
-          <div class="navio__card">
-            <img
-              src="img/msc_euribia.png"
-              alt="MSC Euribia"
-              class="navio__imagem"
-            />
-            <p class="navio__nome">MSC EURIBIA</p>
-          </div>
-          <div class="navio__card">
-            <img
-              src="img/msc_meraviglia.png"
-              alt="MSC Meraviglia"
-              class="navio__imagem"
-            />
-            <p class="navio__nome">MSC MERAVIGLIA</p>
-          </div>
-          <div class="navio__card">
-            <img
-              src="img/msc_opera.png"
-              alt="MSC Opera"
-              class="navio__imagem"
-            />
-            <p class="navio__nome">MSC OPERA</p>
-          </div>
-          <div class="navio__card">
-            <img
-              src="img/msc_preziosa.png"
-              alt="MSC Preziosa"
-              class="navio__imagem"
-            />
-            <p class="navio__nome">MSC PREZIOSA</p>
+        <div class="navio__fundo">
+          <h3 id="nossos__navios__titulo">NOSSOS NAVIOS</h3>
+          <div class="navio__galeria">
+            <div class="navio__card">
+              <img
+                src="img/msc_armonia.png"
+                alt="MSC Armonia"
+                class="navio__imagem"
+              />
+              <p class="navio__nome">MSC ARMONIA</p>
+            </div>
+            <div class="navio__card">
+              <img
+                src="img/msc_bellissima.png"
+                alt="MSC Bellissima"
+                class="navio__imagem"
+              />
+              <p class="navio__nome">MSC BELLISSIMA</p>
+            </div>
+            <div class="navio__card">
+              <img
+                src="img/msc_euribia.png"
+                alt="MSC Euribia"
+                class="navio__imagem"
+              />
+              <p class="navio__nome">MSC EURIBIA</p>
+            </div>
+            <div class="navio__card">
+              <img
+                src="img/msc_meraviglia.png"
+                alt="MSC Meraviglia"
+                class="navio__imagem"
+              />
+              <p class="navio__nome">MSC MERAVIGLIA</p>
+            </div>
+            <div class="navio__card">
+              <img
+                src="img/msc_opera.png"
+                alt="MSC Opera"
+                class="navio__imagem"
+              />
+              <p class="navio__nome">MSC OPERA</p>
+            </div>
+            <div class="navio__card">
+              <img
+                src="img/msc_preziosa.png"
+                alt="MSC Preziosa"
+                class="navio__imagem"
+              />
+              <p class="navio__nome">MSC PREZIOSA</p>
+            </div>
           </div>
         </div>
       </section>
