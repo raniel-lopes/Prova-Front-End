@@ -378,20 +378,36 @@ button:hover {
 
 .pacote {
     display: flex;
+    /* Usar flexbox para alinhar os itens dentro do pacote */
     flex-direction: column;
-    align-items: center;
+    /* Itens empilhados verticalmente */
+    align-items: flex-start;
+    /* Alinha os itens à esquerda */
     width: 303px;
+    /* Largura do pacote */
     height: 466px;
     /* Altura total do pacote */
     margin: 0 10px;
     /* Espaço entre os pacotes */
+    border: 1px solid #ccc;
     /* Borda opcional */
-    border-radius: 8px;
+    border-radius: 16px;
     /* Arredondamento das bordas */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     /* Sombra sutil */
     flex-shrink: 0;
     /* Evita que os pacotes encolham */
+    overflow: hidden;
+    /* Esconde qualquer conteúdo que ultrapasse a borda */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transição suave para transformação e sombra */
+}
+
+.pacote:hover {
+    transform: scale(1.05);
+    /* Aumenta o tamanho da div em 5% */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Sombra mais intensa */
 }
 
 .pacote__imagem {
@@ -405,6 +421,8 @@ button:hover {
     /* Arredondamento das bordas superiores */
     object-fit: cover;
     /* A imagem preencherá o contêiner sem distorcer a proporção */
+    margin-bottom: 20px;
+    /* Espaço de 20px entre a imagem e o texto h3 */
 }
 
 .pacote h3,
@@ -412,20 +430,27 @@ button:hover {
 .pacote h2 {
     margin: 0;
     /* Remove margens indesejadas */
-    padding: 10px;
-    /* Espaçamento interno para os textos */
+    padding: 0;
+    /* Remove espaçamento interno para os textos */
+    margin-left: 17px;
+    /* Distância de 17px da borda esquerda para todos os textos */
+
 }
 
 .pacote h3 {
-    color: #1A1C39;
+    color: #1D1D1B;
     /* Cor do título do pacote */
-    font-family: 'Poppins', sans-serif;
-    /* Fonte Poppins */
-    font-size: 24px;
-    /* Tamanho da fonte */
+    font-family: Inter;
+    /* Fonte do título */
+    font-size: 20px;
+    /* Tamanho da fonte do título */
+    font-weight: 600;
+    /* Peso da fonte do título */
+
 }
 
 .pacote p {
+    margin-top: 10px;
     color: #4E4E4E;
     /* Cor do texto descritivo */
     font-family: 'Poppins', sans-serif;
@@ -435,10 +460,79 @@ button:hover {
 }
 
 .pacote h2 {
-    color: #FF6200EE;
-    /* Cor do preço */
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 5px;
+}
+
+#nossos__navios {
+    background-image: url('img/bg_nossos_navios.png');
+    /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    /* Faz com que a imagem cubra toda a seção */
+    background-position: center;
+    /* Centraliza a imagem de fundo */
+    padding: 40px 20px;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o texto dentro da seção */
+    color: #fff;
+    /* Cor do texto (branco, para destacar sobre o fundo) */
+}
+
+#nossos__navios__titulo {
     font-family: 'Poppins', sans-serif;
     /* Fonte Poppins */
-    font-size: 20px;
-    /* Tamanho da fonte */
+    font-size: 36px;
+    /* Tamanho da fonte do título */
+    font-weight: 700;
+    /* Peso da fonte */
+    margin-bottom: 30px;
+    /* Espaço abaixo do título */
+}
+
+.navio__galeria {
+    display: grid;
+    /* Usar grid para criar uma grade de navios */
+    grid-template-columns: repeat(2, 1fr);
+    /* Duas colunas de largura igual */
+    gap: 30px;
+    /* Espaçamento entre os cards */
+}
+
+.navio__card {
+    display: flex;
+    /* Usar flexbox para alinhar a imagem e o nome do navio */
+    flex-direction: column;
+    /* Itens empilhados verticalmente */
+    align-items: center;
+    /* Centraliza os itens horizontalmente */
+    margin: 0;
+    /* Remove margens extras */
+    width: 100%;
+    /* Largura dos cards */
+    color: #1A1C39;
+    /* Cor do texto dos nomes dos navios */
+}
+
+.navio__imagem {
+    width: 100%;
+    /* A imagem ocupa toda a largura do card */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    border-radius: 8px;
+    /* Bordas arredondadas nas imagens */
+}
+
+.navio__nome {
+    margin-top: 10px;
+    /* Espaço acima do nome do navio */
+    font-family: 'Poppins', sans-serif;
+    /* Fonte do nome do navio */
+    font-size: 14px;
+    /* Tamanho da fonte do nome do navio */
 }
